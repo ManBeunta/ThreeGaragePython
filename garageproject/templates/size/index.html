@@ -2,22 +2,20 @@
 
 {% block content %}
 <div style="padding: 20px;">
-    <h1>All Owners Motor Page</h1>
-    <p>Owners Registered in the Owner Page:</p>
+    <h1>All Brands Motor Page</h1>
+    <p>Brands Registered in the Brand Page:</p>
     <ul>
         {% load static %}
         <table class="table" style="width: 100%">
             <tr>
-                <th>Owner Name</th>
-                <th>Motor Name</th>
-                <th>Size Motor</th>
+                <th>CC Motor</th>
+                <th>Berat Motor</th>
                 <th>Option</th>
             </tr>
-            {% for pemilik_motor in pemilik_motors %}
+            {% for size_motor in size_motors %}
             <tr>
-                <td>{{ pemilik_motor.name }}</td>
-                <td>{{ pemilik_motor.nameMotor }}</td>
-                <td>{{ pemilik_motor.size_motor.all|join:', ' }}</td>
+                <td>{{ size_motor.name }}</td>
+                <td>{{ size_motor.beratMotor }}</td>
                 <td><a href="#" class="btn btn-success">Edit</a> <a href="#" class="btn btn-danger">Delete</a> <a href="#" class="btn btn-primary">Add New Brand</a></td>
             </tr>
             {% endfor %}
