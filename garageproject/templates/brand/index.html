@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="padding: 20px;">
+    <h1>All Brands Motor Page</h1>
+    <p>Brands Registered in the Brand Page:</p>
+    <ul>
+        {% load static %}
+        <table class="table" style="width: 100%">
+            <tr>
+                <th>Owner Name</th>
+                <th>Option</th>
+            </tr>
+            {% for brand_motor in brand_motors %}
+            <tr>
+                <td>{{ brand_motor.name }}</td>
+                <td><a href="#" class="btn btn-success">Edit</a> <a href="#" class="btn btn-danger">Delete</a> <a href="#" class="btn btn-primary">Add New Brand</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </ul>   
+</div>
+{% endblock %}

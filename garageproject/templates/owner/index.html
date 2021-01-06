@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="padding: 20px;">
+    <h1>All Owners Motor Page</h1>
+    <p>Owners Registered in the Owner Page:</p>
+    <ul>
+        {% load static %}
+        <table class="table" style="width: 100%">
+            <tr>
+                <th>Owner Name</th>
+                <th>Owner Name</th>
+                <th>Owner Name</th>
+                <th>Option</th>
+            </tr>
+            {% for pemilik_motor in pemilik_motors %}
+            <tr>
+                <td>{{ pemilik_motor.name }}</td>
+                <td>{{ pemilik_motor.nameMotor }}</td>
+                <td>{{ pemilik_motor.size_motor.name }}</td>
+                <td><a href="#" class="btn btn-success">Edit</a> <a href="#" class="btn btn-danger">Delete</a> <a href="#" class="btn btn-primary">Add New Brand</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </ul>   
+</div>
+{% endblock %}
